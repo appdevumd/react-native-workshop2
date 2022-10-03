@@ -25,15 +25,15 @@ const styles = StyleSheet.create({
       },
 });
 
-export default function Email() {
+export default function Email({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Please enter your email:</Text>
-            <TextInput 
+            <TextInput
                 style={styles.input}
                 placeholder="type your email here" />
             <TouchableOpacity
-                    onPress={() => {}}
+                    onPress={() => {navigation.navigate("Registered")}}
                     style={styles.button}
                 >
                 <Text style={styles.text}>Next</Text>

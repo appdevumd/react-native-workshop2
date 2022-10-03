@@ -25,16 +25,16 @@ const styles = StyleSheet.create({
       },
 });
 
-export default function Name() {
+export default function Name({ navigation }) {
     return (
         <View style={styles.container}>
             <ScrollView>
                 <Text style={styles.text}>Please enter your name:</Text>
-                <TextInput 
+                <TextInput
                     style={styles.input}
                     placeholder="type your name" />
                 <TouchableOpacity
-                    onPress={() => {}}
+                    onPress={() => {navigation.navigate("Add email")}}
                     style={styles.button}
                 >
                     <Text style={styles.text}>Next</Text>
