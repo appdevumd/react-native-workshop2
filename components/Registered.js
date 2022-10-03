@@ -10,12 +10,9 @@ const Tab = createBottomTabNavigator();
 
 export default function Registered() {
   return (
-    <NavigationContainer independent={true}>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={Welcome} />
-        <Tab.Screen name="Info" component={Info} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <View>
+      
+    </View>
   );
 }
 

@@ -37,41 +37,13 @@ const styles = StyleSheet.create({
 });
 
 export default function Info() {
-    const [modalVisible, setModalVisible] = useState(false);
-
     return (
         <View style={styles.container}>
-            <Modal
-                animationType="slide"
-                transparent={true}
-                visible={modalVisible}
-                onRequestClose={() => {
-                    Alert.alert("Modal has been closed.");
-                    setModalVisible(!modalVisible);
-                }}
-            > 
-                <View style={styles.centeredView}>
-                    <View style={styles.modalView}>
-                        <Text>October 3, 2022</Text>
-                        <Button 
-                            title="Close"
-                            onPress={() => {setModalVisible(false)}} />
-                    </View>
-                </View>
-            </Modal>
-
-            {/* Below is first part of workshop! */}
             <ScrollView>
                 <Text style={styles.text}>Information:</Text>
                 <Text style={styles.text}>Date: October 3, 2022</Text>
                 <Text style={styles.text}>Time: 6-7pm</Text>
                 <Text style={styles.text}>Location: CSI 2117</Text>
-
-                {/* Modal stuff at the end */}
-
-                <Button 
-                    title="Click to see the date"
-                    onPress={() => {setModalVisible(true)}} />
             </ScrollView>
         </View>
     );

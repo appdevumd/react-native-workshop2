@@ -12,13 +12,9 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Add name" component={Name} />
-        <Stack.Screen name="Add email" component={Email} />
-        <Stack.Screen name="Registered" component={Registered} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+      <Welcome />
+    </View>
   );
 }
 
