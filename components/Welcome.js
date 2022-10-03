@@ -16,9 +16,7 @@ const styles = StyleSheet.create({
 export default function Welcome() {
     return (
         <View style={styles.container}>
-            <ScrollView>
-                <Text style={styles.text}>Welcome to React Native Workshop 2!</Text>
-            </ScrollView>
+            <Text style={styles.text}>Welcome to React Native Workshop 2!</Text>
         </View>
     );
 }
