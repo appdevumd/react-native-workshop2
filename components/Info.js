@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Modal } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 const styles = StyleSheet.create({
@@ -17,13 +17,12 @@ const styles = StyleSheet.create({
 export default function Info() {
     return (
         <View style={styles.container}>
-        <ScrollView>
-            <Text style={styles.text}>Information:</Text>
-            <Text style={styles.text}>Date: October 3, 2022</Text>
-            <Text style={styles.text}>Time: 6-7pm</Text>
-            <Text style={styles.text}>Location: CSI 2117</Text>
-            {/* <StatusBar style="auto" /> */}
-        </ScrollView>
+            <ScrollView>
+                <Text style={styles.text}>Information:</Text>
+                <Text style={styles.text}>Date: October 3, 2022</Text>
+                <Text style={styles.text}>Time: 6-7pm</Text>
+                <Text style={styles.text}>Location: CSI 2117</Text>
+            </ScrollView>
         </View>
     );
 }
