@@ -3,21 +3,19 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { NavigationContainer, TabActions } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Registered from './components/Registered';
-import Name from './components/Name';
-import Email from './components/Email';
+import Welcome from './Welcome';
+import Info from './Info';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+export default function Registered() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: true }}>
-        <Stack.Screen name="Add name" component={Name} />
-        <Stack.Screen name="Add email" component={Email} />
-        <Stack.Screen name="Registered" component={Registered} />
-      </Stack.Navigator>
+    <NavigationContainer independent={true}>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Welcome} />
+        <Tab.Screen name="Info" component={Info} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
